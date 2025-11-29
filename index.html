@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TEKXO GADGETZ</title>
+
+  <style>
+    * {
+      margin: 0; padding: 0;
+      box-sizing: border-box;
+      font-family: Poppins, sans-serif;
+    }
+
+    body { background: #0c0c0c; color: #fff; }
+
+    /* HEADER */
+    .header {
+      padding: 15px 18px;
+      display: flex; justify-content: space-between; align-items: center;
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      position: sticky; top: 0; z-index: 10;
+    }
+    .logo {
+      font-size: 24px; font-weight: 700;
+      background: linear-gradient(45deg,#00d0ff,#0066ff);
+      -webkit-background-clip: text; color: transparent;
+    }
+    .menu { font-size: 26px; color: #ccc; cursor: pointer; }
+
+    /* DROPDOWN MENU */
+    .dropdown {
+      position: absolute;
+      top: 60px; right: 15px;
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 10px;
+      width: 160px;
+      display: none;
+      flex-direction: column;
+      padding: 10px 0;
+      animation: fade .2s ease-in-out;
+    }
+
+    @keyframes fade {
+      from { opacity: 0; transform: translateY(-8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .dropdown a {
+      padding: 12px 15px;
+      text-decoration: none;
+      color: white;
+      display: block;
+      font-size: 15px;
+      transition: 0.2s;
+    }
+    .dropdown a:hover {
+      background: #00c9ff;
+      color: black;
+    }
+
+    /* HERO */
+    .hero {
+      text-align: center; padding: 30px 15px;
+      background: linear-gradient(135deg,#051923,#00111a);
+    }
+    .hero h1 { font-size: 28px; margin-bottom: 8px; }
+    .hero p { color: #b9b9b9; margin-bottom: 18px; }
+    .hero-btn {
+      padding: 10px 20px; border-radius: 10px; border: none;
+      background: #00c9ff; font-weight: 600; cursor: pointer;
+    }
+
+    /* CATEGORIES */
+    .category-section { padding: 22px 14px; }
+    .categories {
+      display: grid; gap: 14px;
+      grid-template-columns: repeat(2,1fr);
+    }
+
+    .category-btn {
+      padding: 18px 10px; text-align: center;
+      border-radius: 12px; font-weight: 600;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.1);
+      cursor: pointer; transition: .3s;
+      text-decoration: none; color: white; display: block;
+    }
+    .category-btn:hover {
+      background: #00c9ff; color: #000;
+    }
+
+    /* ABOUT BOX */
+    .about {
+      margin: 18px; padding: 20px; border-radius: 14px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      line-height: 1.6;
+    }
+    .about-title {
+      font-size: 20px; margin-bottom: 8px;
+      background: linear-gradient(45deg,#00d0ff,#0077ff);
+      -webkit-background-clip: text; color: transparent;
+    }
+
+    /* ADS */
+    .ads-section { padding: 20px 15px; }
+    .ad-box {
+      padding: 22px; border-radius: 14px;
+      background: linear-gradient(135deg,#002233,#003d66);
+      border-left: 5px solid #009dcc;
+      font-weight: 600; box-shadow: 0 4px 18px rgba(0,0,0,0.4);
+      transition: .3s; cursor: pointer;
+      margin-bottom: 14px;
+    }
+    .ad-box:hover { transform: scale(1.03); }
+
+    @media (min-width: 600px) {
+      .logo { font-size: 30px; }
+      .hero h1 { font-size: 35px; }
+      .categories { grid-template-columns: repeat(3,1fr); }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="logo">TEKXO GADGETZ</div>
+    <div class="menu" onclick="toggleMenu()">⋮</div>
+  </div>
+
+  <!-- DROPDOWN MENU -->
+  <div id="dropdownMenu" class="dropdown">
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact Us</a>
+  </div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <h1>Welcome to TEKXO GADGETZ</h1>
+    <p>Your Premium Destination for Modern Gadgets & Tech Accessories</p>
+    <button class="hero-btn">Shop Now</button>
+  </div>
+
+  <!-- CATEGORIES -->
+  <div class="category-section">
+    <h2 style="font-size:20px; margin-bottom:12px;">Shop by Category</h2>
+
+    <div class="categories">
+      <a class="category-btn" href="Audio products.html">Audio Products</a>
+      <a class="category-btn" href="Fashion.html">Fashion</a>
+      <a class="category-btn" href="dicaste.html">Aesthetic Toys</a>
+      <a class="category-btn" href="Smart gadgets.html">Smart Gadgets</a>
+    </div>
+  </div>
+
+  <!-- ABOUT SECTION -->
+  <div class="about">
+    <div class="about-title">About TEKXO GADGETZ</div>
+    TEKXO GADGETZ brings you top-quality technology at unbeatable prices.
+    we provide fashion, products, accessories, we focus on quality, trust, and fast delivery.
+  </div>
+
+  <!-- ADS -->
+  <div class="ads-section">
+    <h2 style="font-size:20px; margin-bottom:10px;">Exclusive Deals</h2>
+    <div class="ad-box" onclick="window.location.href='https://www.youtube.com/'">🔥 Up to 50% OFF on Smartphones!</div>
+    <div class="ad-box" onclick="window.location.href='https://www.youtube.com/'">🎧 Earphones Starting at Just ₹199</div>
+    <div class="ad-box" onclick="window.location.href='https://www.youtube.com/'">⌚ Smartwatch Flash Sale – Limited Time Only</div>
+  </div>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("dropdownMenu");
+    menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+  }
+
+  // Hide dropdown when clicking outside
+  document.addEventListener("click", function(e){
+    const menu = document.getElementById("dropdownMenu");
+    const button = document.querySelector(".menu");
+
+    if (!menu.contains(e.target) && !button.contains(e.target)) {
+      menu.style.display = "none";
+    }
+  });
+</script>
+
+</body>
+</html>
